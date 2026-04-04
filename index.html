@@ -32,7 +32,9 @@ section{padding:5.5rem 2rem}
 .hero-eyebrow{font-size:0.73rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--terra);margin-bottom:0.9rem}
 .hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:500;line-height:1.05;color:var(--brown);margin-bottom:0.9rem}
 .hero-name em{font-style:italic;color:var(--terra)}
-.hero-tagline{font-size:1rem;color:var(--text-mid);line-height:1.75;margin-bottom:1.8rem;max-width:460px}
+.hero-tagline{font-size:1rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.8rem;max-width:480px}
+.hero-tagline strong{color:var(--brown);font-weight:500}
+.hero-stat{display:inline-block;background:var(--terra-pale);border:1px solid var(--terra);border-radius:8px;padding:8px 16px;font-size:0.8rem;color:var(--terra);font-weight:500;margin-bottom:1.6rem}
 .hero-badges{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:2.2rem}
 .badge{font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:1px solid}
 .badge-terra{color:var(--terra);border-color:var(--terra);background:var(--terra-pale)}
@@ -41,7 +43,7 @@ section{padding:5.5rem 2rem}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{padding:11px 26px;background:var(--terra);color:#fff;border:none;border-radius:4px;font-size:0.83rem;font-weight:500;letter-spacing:0.05em;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s}
 .btn-primary:hover{background:var(--terra-light);transform:translateY(-1px)}
-.btn-outline{padding:11px 26px;background:transparent;color:var(--terra);border:1.5px solid var(--terra);border-radius:4px;font-size:0.83rem;font-weight:500;letter-spacing:0.05em;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s}
+.btn-outline{padding:11px 26px;background:transparent;color:var(--terra);border:1.5px solid var(--terra);border-radius:4px;font-size:0.83rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s}
 .btn-outline:hover{background:var(--terra-pale)}
 .hero-visual{position:relative;display:flex;justify-content:center}
 .hero-card{background:#fff;border:1px solid var(--sand-light);border-radius:16px;padding:1.8rem;box-shadow:0 8px 40px rgba(61,43,31,0.08);max-width:300px;width:100%}
@@ -58,8 +60,11 @@ section{padding:5.5rem 2rem}
 .about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start}
 .about-aside{position:sticky;top:76px}
 .about-highlight{background:#fff;border-left:3px solid var(--terra);border-radius:0 8px 8px 0;padding:1.1rem 1.4rem;margin-top:1.4rem}
-.about-highlight p{font-size:0.83rem;color:var(--text-mid);line-height:1.7;font-style:italic}
-.about-body p{font-size:0.92rem;color:var(--text-mid);line-height:1.82;margin-bottom:1.1rem}
+.about-highlight p{color:var(--brown);line-height:1.75;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem}
+.about-body p{font-size:0.93rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.2rem}
+.about-stat-box{background:var(--terra-pale);border:1px solid var(--terra);border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.2rem}
+.about-stat-box .stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--terra)}
+.about-stat-box .stat-label{font-size:0.78rem;color:var(--brown-mid);margin-top:0.2rem;line-height:1.5}
 .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-top:1.4rem}
 .fact-card{background:var(--cream);border:1px solid var(--sand-light);border-radius:10px;padding:0.9rem 1.1rem}
 .fact-number{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--terra)}
@@ -89,15 +94,20 @@ section{padding:5.5rem 2rem}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
 .project-card{background:#fff;border:1px solid var(--sand-light);border-radius:14px;padding:1.8rem;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
 .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terra)}
+.project-card.ongoing::before{background:var(--olive)}
 .project-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(61,43,31,0.1)}
-.pc-tag{font-size:0.66rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra);margin-bottom:0.65rem}
-.pc-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--brown);margin-bottom:0.5rem;line-height:1.3}
-.pc-problem{font-size:0.72rem;font-weight:500;color:var(--text-soft);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.05em}
-.pc-desc{font-size:0.83rem;color:var(--text-mid);line-height:1.72;margin-bottom:0.9rem}
-.pc-result{background:var(--terra-pale);border-radius:6px;padding:0.6rem 0.9rem;margin-bottom:1rem}
-.pc-result-label{font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--terra);margin-bottom:0.15rem}
-.pc-result-text{font-size:0.8rem;color:var(--brown-mid);font-weight:500}
-.pc-chips{display:flex;flex-wrap:wrap;gap:0.35rem}
+.pc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.65rem}
+.pc-tag{font-size:0.66rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra)}
+.pc-ongoing-badge{font-size:0.62rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px;background:var(--olive-pale);color:var(--olive);border:1px solid var(--olive-light);white-space:nowrap}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--brown);margin-bottom:1rem;line-height:1.3}
+.star-block{margin-bottom:0.75rem}
+.star-label{font-size:0.68rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:0.3rem}
+.star-s{background:#EDE8DF;color:#6B4C3B}
+.star-t{background:#EEF0E8;color:#5C6B3A}
+.star-a{background:#F5EBE4;color:#B85C38}
+.star-r{background:#E8F0F5;color:#2C6B8C}
+.star-block p{font-size:0.82rem;color:var(--text-mid);line-height:1.7}
+.pc-chips{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem}
 .pc-chip{font-size:0.66rem;padding:3px 9px;background:var(--olive-pale);color:var(--olive);border-radius:20px}
 #education{background:var(--olive-pale)}
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
@@ -170,19 +180,20 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
   <div class="container">
     <div class="hero-grid">
       <div>
-        <p class="hero-eyebrow fade-up">Data Scientist · AI Engineer · NLP Researcher</p>
+        <p class="hero-eyebrow fade-up">Data Scientist · Data Analyst · AI-Powered Problem Solver</p>
         <h1 class="hero-name fade-up d1">Shreemithra<br><em>Naveen</em></h1>
-        <p class="hero-tagline fade-up d2">I build LLM pipelines, agentic AI systems, and data workflows that actually work at scale — from research labs to enterprise clients.</p>
+        <div class="hero-stat fade-up d2">Only ~5% of companies have AI agents in production. I've already built one.</div>
+        <p class="hero-tagline fade-up d2">Most people are still in the demo phase. I've been in production. I'm a Data Scientist and Analyst who uses AI the way most teams only talk about — to actually eliminate manual work, automate real pipelines, and move faster than people who don't have these tools.</p>
         <div class="hero-badges fade-up d3">
           <span class="badge badge-terra">M.S. Data Science · GPA 4.0</span>
           <span class="badge badge-olive">IEEE Published</span>
           <span class="badge badge-sand">SemEval 2026</span>
-          <span class="badge badge-terra">2.5+ Years Experience</span>
+          <span class="badge badge-terra">Engineering Background</span>
           <span class="badge badge-olive">Open to Relocation</span>
         </div>
         <div class="hero-actions fade-up d4">
-          <a href="#projects" class="btn-primary">View My Work</a>
-          <a href="#contact" class="btn-outline">Let's Connect</a>
+          <a href="#projects" class="btn-primary">See What I've Built</a>
+          <a href="#contact" class="btn-outline">Let's Talk</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -190,12 +201,12 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="hero-card">
           <div class="hc-avatar">SN</div>
           <p class="hc-name">Shreemithra Naveen</p>
-          <p class="hc-role">Data Scientist · Scottsdale, AZ</p>
-          <div class="hc-stat"><span>Manual Collection Eliminated</span><span>100%</span></div>
-          <div class="hc-stat"><span>Research Awards Managed</span><span>2,000+</span></div>
-          <div class="hc-stat"><span>Team Effort Reduced</span><span>60%</span></div>
+          <p class="hc-role">Data Scientist & Analyst · Scottsdale, AZ</p>
+          <div class="hc-stat"><span>Manual Work Eliminated</span><span>100%</span></div>
+          <div class="hc-stat"><span>Research Awards Handled</span><span>2,000+</span></div>
+          <div class="hc-stat"><span>Team Time Saved</span><span>60%</span></div>
           <div class="hc-stat"><span>IEEE Papers Published</span><span>2</span></div>
-          <div class="hc-stat"><span>SemEval NLP F1 Score</span><span>0.78</span></div>
+          <div class="hc-stat"><span>NLP Competition F1</span><span>0.78</span></div>
         </div>
         <div class="floating-chip chip2">📍 Scottsdale, AZ</div>
       </div>
@@ -208,23 +219,23 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
     <div class="about-grid">
       <div class="about-aside">
         <p class="section-label">About Me</p>
-        <h2 class="section-title">Human at the center of every model</h2>
+        <h2 class="section-title">The rare combo that actually moves things</h2>
         <div class="section-line"></div>
         <div class="about-highlight">
-          <p>"I don't just build models — I build systems that solve problems people actually have."</p>
+          <p>"Most people are in the demo phase. I've been in production."</p>
         </div>
         <div class="about-facts">
-          <div class="fact-card"><div class="fact-number">2.5+</div><div class="fact-label">Years of measurable impact</div></div>
-          <div class="fact-card"><div class="fact-number">60%</div><div class="fact-label">Team effort cut via automation</div></div>
+          <div class="fact-card"><div class="fact-number">~5%</div><div class="fact-label">Companies with AI agents in production — I've built one</div></div>
+          <div class="fact-card"><div class="fact-number">60%</div><div class="fact-label">Team effort cut through real automation</div></div>
           <div class="fact-card"><div class="fact-number">500K+</div><div class="fact-label">Samples in NLP classifier</div></div>
           <div class="fact-card"><div class="fact-number">2</div><div class="fact-label">IEEE publications</div></div>
         </div>
       </div>
       <div class="about-body">
-        <p>I'm a Data Scientist specializing in LLM-powered pipelines, RAG systems, and multi-step prompt engineering. My work sits at the intersection of applied AI research and real-world engineering — where the goal is always a system that works in production, not just in a notebook.</p>
-        <p>At the University of Arizona, I deployed a production LLM agent that autonomously extracted structured data from 2,000+ websites, completely eliminating manual data collection. At Futurlytic, I built enterprise-grade ETL pipelines for HSBC and Microsoft. I've competed at SemEval 2026 — one of the top global NLP competitions — and published two IEEE papers on autonomous robotics.</p>
-        <p>I currently work in financial data analytics, applying production-level precision to complex, unstructured data problems. I'm always building something on the side — right now, an agentic job search system that cuts application time by over 80%.</p>
-        <p>Based in Scottsdale, AZ and open to relocation for the right opportunity.</p>
+        <p>Only about 5% of companies have AI agents running in production. I built one as a grad student — a live LLM agent that autonomously scraped 2,000+ websites and wiped out an entire manual reporting workflow. Not a demo. Not a proof of concept. It ran.</p>
+        <p>That's the difference between knowing AI and using AI. Most data professionals stop at ChatGPT for emails or a Jupyter notebook with an LLM call. I've taken it further — automated real pipelines, reduced actual hours in real teams, and published research at one of the top global NLP competitions.</p>
+        <p>My engineering background is what makes this stick. I don't just look at data — I think about the whole system. Where does it break? How does it scale? That mix of data thinking, engineering instinct, and actual AI execution is rare. The stats say 5%. I'm in that 5%.</p>
+        <p>Currently in Scottsdale, AZ. Open to relocation for the right role.</p>
       </div>
     </div>
   </div>
@@ -232,41 +243,39 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
 
 <section id="skills">
   <div class="container">
-    <p class="section-label">Skills & Expertise</p>
-    <h2 class="section-title">The full stack of what I bring</h2>
+    <p class="section-label">Skills & Tools</p>
+    <h2 class="section-title">What I actually use to get things done</h2>
     <div class="section-line"></div>
     <div class="skills-grid">
       <div class="skill-group">
-        <div class="sg-icon">🤖</div>
-        <div class="sg-title">LLM & AI</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Prompt Engineering (multi-step)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:96%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Agentic AI Systems</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>RAG Systems</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>OpenAI API / LLM APIs</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>NLP / CodeBERT / Fine-tuning</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>LLM-as-a-Judge</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-      </div>
-      <div class="skill-group">
-        <div class="sg-icon">💻</div>
-        <div class="sg-title">Programming & Data</div>
+        <div class="sg-icon">📊</div>
+        <div class="sg-title">Data Science & Analysis</div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>Python (Pandas, NumPy, Sklearn)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:97%"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>SQL (Advanced)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:94%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>ETL Pipelines</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Azure</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Statistical Modeling & A/B Testing</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Feature Engineering</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>R · SAS</span><span>Proficient</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Docker · Git</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div></div>
       </div>
       <div class="skill-group">
-        <div class="sg-icon">📊</div>
-        <div class="sg-title">Analytics</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>A/B Testing & Experiment Design</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Statistical Modeling</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Feature Engineering</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Anomaly Detection</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:84%"></div></div></div>
+        <div class="sg-icon">🤖</div>
+        <div class="sg-title">AI Tools I Actually Use</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>LLM APIs (OpenAI, Groq, etc.)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Prompt Engineering (multi-step)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:96%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>RAG Systems</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Agentic Pipelines</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:87%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>NLP / CodeBERT / Fine-tuning</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-icon">🔧</div>
+        <div class="sg-title">Engineering & Pipelines</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>ETL Pipelines</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Azure</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Docker · Git</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Web Scraping (BeautifulSoup)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div></div>
       </div>
       <div class="skill-group">
         <div class="sg-icon">📈</div>
-        <div class="sg-title">Visualization</div>
+        <div class="sg-title">Visualization & Reporting</div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>Tableau</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>Power BI</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-label"><span>Plotly · Looker Studio</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
@@ -279,7 +288,7 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
 <section id="experience">
   <div class="container">
     <p class="section-label">Experience</p>
-    <h2 class="section-title">Where I've built things that matter</h2>
+    <h2 class="section-title">Where I've made things better</h2>
     <div class="section-line"></div>
     <div class="exp-timeline">
       <div class="exp-item">
@@ -288,8 +297,8 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="exp-role">Financial Reporting Associate</div>
         <div class="exp-org">Equity Methods · Scottsdale, AZ</div>
         <ul class="exp-bullets">
-          <li>Transforming highly unstructured Excel data into clean, structured financial deliverables for clients — demonstrating production-level data accuracy from day one.</li>
-          <li>Applying rigorous data engineering practices to complex financial reporting workflows in a fast-paced analytical environment.</li>
+          <li>Taking messy, unstructured Excel data and turning it into clean, accurate financial deliverables for clients — got up to speed fast and contributing to real work from week one.</li>
+          <li>Bringing a data engineering mindset to financial reporting workflows that most people treat as manual tasks.</li>
         </ul>
       </div>
       <div class="exp-item">
@@ -298,9 +307,9 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="exp-role">Graduate Research Fellow – Research Analytics</div>
         <div class="exp-org">University of Arizona · Tucson, AZ</div>
         <ul class="exp-bullets">
-          <li>Deployed a production LLM agent (ChatGPT API + BeautifulSoup) autonomously extracting structured data from 2,000+ websites — eliminating 100% of manual data collection.</li>
-          <li>Engineered multi-step prompts and built cross-platform ETL pipelines across 3 systems (Pivot-RP, InfoReady, Smartsheet), cutting team effort by 60% across 2,000+ active research awards.</li>
-          <li>Designed A/B tests and hypothesis-driven experiments; delivered analytical presentations to leadership that directly shaped grant strategy decisions.</li>
+          <li>Built an LLM agent that scraped and structured data from 2,000+ websites automatically — what used to take the team hours every week now just runs on its own.</li>
+          <li>Connected three platforms (Pivot-RP, InfoReady, Smartsheet) through ETL pipelines and AI-assisted prompts, cutting the team's manual effort by 60%.</li>
+          <li>Ran A/B tests to validate everything worked, and presented findings to leadership that changed how they made grant decisions.</li>
         </ul>
       </div>
       <div class="exp-item">
@@ -309,8 +318,8 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="exp-role">Data Analyst Intern</div>
         <div class="exp-org">Sky Village Financial</div>
         <ul class="exp-bullets">
-          <li>Identified variance drivers across key business metrics — built Tableau and Power BI dashboards adopted org-wide for self-serve KPI monitoring.</li>
-          <li>Reduced manual reporting overhead for cross-functional finance teams through scalable dashboard design.</li>
+          <li>Dug into the numbers to figure out why certain metrics were swinging — built Tableau and Power BI dashboards that the whole org switched to for day-to-day reporting.</li>
+          <li>Finance teams that used to ask me for reports started pulling the numbers themselves. That's the goal.</li>
         </ul>
       </div>
       <div class="exp-item">
@@ -319,8 +328,8 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="exp-role">Data Specialist (Intern → Full-time)</div>
         <div class="exp-org">Futurlytic Private Limited · Bangalore, India</div>
         <ul class="exp-bullets">
-          <li>Built automated ETL and analytics pipelines for HSBC and Microsoft using SQL, Python, and Tableau — replacing manual processes entirely for 2 enterprise clients.</li>
-          <li>Designed Azure-based data integration workflows with full ETL QA, ensuring data integrity across business-critical reporting systems.</li>
+          <li>Built ETL pipelines and analytics workflows for HSBC and Microsoft — automated things that were being done manually and made sure the output was actually reliable.</li>
+          <li>Set up Azure-based data integrations with full QA so nothing broke when it hit the reporting systems.</li>
         </ul>
       </div>
     </div>
@@ -330,39 +339,112 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
 <section id="projects">
   <div class="container">
     <p class="section-label">Projects</p>
-    <h2 class="section-title">Problems I've picked fights with</h2>
+    <h2 class="section-title">Real problems I decided to fix</h2>
     <div class="section-line"></div>
     <div class="projects-grid">
+
+      <!-- Project 1 -->
       <div class="project-card">
-        <div class="pc-tag">NLP Research · SemEval 2026 · University of Arizona</div>
-        <div class="pc-title">AI vs. Human Code Detection</div>
-        <div class="pc-problem">The Problem</div>
-        <p class="pc-desc">Banks, universities, and software firms cannot reliably distinguish AI-generated code from human-written code — creating critical gaps in plagiarism detection, compliance, and code validation.</p>
-        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
-        <p class="pc-desc">Built a CodeBERT classifier trained on 500,000+ samples with iterative multi-step LLM prompt engineering. Submitted to SemEval 2026, one of the top global NLP competitions.</p>
-        <div class="pc-result"><div class="pc-result-label">Key Result</div><div class="pc-result-text">F1 Score of 0.78 on adversarial NLP classification</div></div>
+        <div class="pc-header">
+          <div class="pc-tag">NLP Research · SemEval 2026</div>
+        </div>
+        <div class="pc-title">Can you tell if code was written by AI?</div>
+        <div class="star-block">
+          <span class="star-label star-s">Situation</span>
+          <p>Banks, universities, and software teams couldn't tell AI-written code apart from human-written code — creating gaps in plagiarism detection, compliance, and code reviews that nobody had solved at scale.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-t">Task</span>
+          <p>Build a reliable classifier that could make this distinction accurately — even on adversarial examples designed to fool it.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-a">Action</span>
+          <p>Trained a CodeBERT classifier on 500,000+ code samples and layered in iterative multi-step prompt engineering to keep pushing accuracy. Submitted to SemEval 2026, one of the biggest NLP competitions globally.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-r">Result</span>
+          <p>Achieved an F1 score of 0.78 on adversarial classification — a hard benchmark in a competition where most teams struggle to crack 0.70.</p>
+        </div>
         <div class="pc-chips"><span class="pc-chip">CodeBERT</span><span class="pc-chip">NLP</span><span class="pc-chip">Prompt Engineering</span><span class="pc-chip">SemEval 2026</span><span class="pc-chip">Python</span></div>
       </div>
-      <div class="project-card">
-        <div class="pc-tag">Agentic AI · 2026 · In Development</div>
-        <div class="pc-title">Agentic Job Search & Outreach Automation</div>
-        <div class="pc-problem">The Problem</div>
-        <p class="pc-desc">Applying to 5 companies takes 5–6 hours of manual effort — tailoring resumes, writing cover letters, researching contacts. The process is broken and doesn't scale.</p>
-        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
-        <p class="pc-desc">Building an end-to-end agentic LLM system that reads job descriptions, matches skills, auto-generates tailored resumes and cover letters, identifies hiring managers, and delivers a daily digest with one-click apply links.</p>
-        <div class="pc-result"><div class="pc-result-label">Target Outcome</div><div class="pc-result-text">Under 120 min per 10 applications (vs. 5–6 hrs today)</div></div>
-        <div class="pc-chips"><span class="pc-chip">Agentic AI</span><span class="pc-chip">LLM</span><span class="pc-chip">RAG</span><span class="pc-chip">Automation</span><span class="pc-chip">OpenAI API</span></div>
+
+      <!-- Project 2 - Ongoing -->
+      <div class="project-card ongoing">
+        <div class="pc-header">
+          <div class="pc-tag">Agentic AI · 2026</div>
+          <span class="pc-ongoing-badge">🟢 Ongoing</span>
+        </div>
+        <div class="pc-title">A job search agent that does the boring part for you</div>
+        <div class="star-block">
+          <span class="star-label star-s">Situation</span>
+          <p>Applying to 5 jobs takes half a day — customizing resumes, writing cover letters, finding the right contact. The process is broken and doesn't scale for anyone doing a serious job search.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-t">Task</span>
+          <p>Build an end-to-end automated system that handles the repetitive parts of job applications so you can focus on the conversations that actually matter.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-a">Action</span>
+          <p>Building an agentic LLM pipeline that reads job descriptions, matches them to a candidate profile, auto-generates tailored resumes and cover letters, identifies hiring managers, and delivers a daily digest with one-click apply links.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-r">Result</span>
+          <p>Targeting under 2 hours for 10 applications — versus the current 5–6 hours. In progress and being actively built.</p>
+        </div>
+        <div class="pc-chips"><span class="pc-chip">Agentic AI</span><span class="pc-chip">LangChain</span><span class="pc-chip">LLM</span><span class="pc-chip">RAG</span><span class="pc-chip">Automation</span></div>
       </div>
-      <div class="project-card">
-        <div class="pc-tag">IEEE Published · 2021–2023 · BMS Institute of Technology</div>
-        <div class="pc-title">Autonomous Floor Cleaning Robot</div>
-        <div class="pc-problem">The Problem</div>
-        <p class="pc-desc">Traditional vacuum robots deviate around obstacles — bottles, erasers, small objects — leaving areas uncleaned. A fundamental design limitation no existing product had solved.</p>
-        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
-        <p class="pc-desc">Proposed autonomous robotic systems using computer vision for real-time object detection, weight estimation, and robotic arm manipulation — enabling the robot to lift obstacles, clean underneath, and replace them.</p>
-        <div class="pc-result"><div class="pc-result-label">Key Result</div><div class="pc-result-text">2 IEEE papers published on autonomous AI systems</div></div>
-        <div class="pc-chips"><span class="pc-chip">Computer Vision</span><span class="pc-chip">Robotics</span><span class="pc-chip">Object Detection</span><span class="pc-chip">IEEE</span><span class="pc-chip">Autonomous AI</span></div>
+
+      <!-- Project 3 - Ongoing -->
+      <div class="project-card ongoing">
+        <div class="pc-header">
+          <div class="pc-tag">Agentic AI · Travel · 2026</div>
+          <span class="pc-ongoing-badge">🟢 Ongoing</span>
+        </div>
+        <div class="pc-title">An AI travel assistant that actually plans your trip</div>
+        <div class="star-block">
+          <span class="star-label star-s">Situation</span>
+          <p>Travel planning is fragmented — you search flights on one site, hotels on another, and end up copy-pasting across tabs for hours. No tool brings it together intelligently.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-t">Task</span>
+          <p>Build a multi-agent travel assistant where specialized agents collaborate — one handles flights, one handles hotels, one summarizes the full trip into a clean itinerary.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-a">Action</span>
+          <p>Building with LangChain and Groq (free LLaMA 3 API) — three collaborative agents working together: a flight search agent, a hotel recommendation agent, and a trip summarizer agent that packages everything into a readable plan.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-r">Result</span>
+          <p>Currently in development — designed to take a destination and budget as input and output a full trip plan in minutes, not hours.</p>
+        </div>
+        <div class="pc-chips"><span class="pc-chip">LangChain</span><span class="pc-chip">Groq</span><span class="pc-chip">LLaMA 3</span><span class="pc-chip">Multi-Agent</span><span class="pc-chip">RAG</span></div>
       </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="pc-header">
+          <div class="pc-tag">IEEE Published · 2021–2023</div>
+        </div>
+        <div class="pc-title">A robot that actually cleans under your stuff</div>
+        <div class="star-block">
+          <span class="star-label star-s">Situation</span>
+          <p>Every robot vacuum just drives around obstacles — bottles, toys, shoes — leaving those patches dirty. It was a fundamental limitation nobody had actually solved.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-t">Task</span>
+          <p>Design an autonomous system that could detect, handle, and replace objects — not just avoid them.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-a">Action</span>
+          <p>Built a computer vision system for real-time object detection and weight estimation, paired with a robotic arm that could pick objects up, clean underneath, and put them back in the right place.</p>
+        </div>
+        <div class="star-block">
+          <span class="star-label star-r">Result</span>
+          <p>Published 2 IEEE papers on the system — solving a problem that every existing vacuum robot on the market still ignores today.</p>
+        </div>
+        <div class="pc-chips"><span class="pc-chip">Computer Vision</span><span class="pc-chip">Robotics</span><span class="pc-chip">Object Detection</span><span class="pc-chip">IEEE</span></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -370,7 +452,7 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
 <section id="education">
   <div class="container">
     <p class="section-label">Education & Certifications</p>
-    <h2 class="section-title">The foundation under the work</h2>
+    <h2 class="section-title">Where the foundation came from</h2>
     <div class="section-line"></div>
     <div class="edu-grid">
       <div class="edu-card">
@@ -378,18 +460,18 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="edu-degree">M.S. Data Science</div>
         <div class="edu-school">University of Arizona</div>
         <div class="edu-year">Graduated December 2025</div>
-        <div class="edu-detail">GPA: 4.0 / 4.0 · Focus: NLP, LLMs, Machine Learning, Statistical Modeling, Big Data Engineering</div>
+        <div class="edu-detail">GPA: 4.0 / 4.0 · NLP, LLMs, Machine Learning, Statistical Modeling, Big Data Engineering</div>
       </div>
       <div class="edu-card">
         <div class="edu-badge">Engineering</div>
         <div class="edu-degree">B.E. Engineering</div>
         <div class="edu-school">BMS Institute of Technology · Bangalore, India</div>
         <div class="edu-year">Graduated May 2023</div>
-        <div class="edu-detail">GPA: 3.75 / 4.0 · Published 2 IEEE papers on autonomous robotic systems during undergraduate research.</div>
+        <div class="edu-detail">GPA: 3.75 / 4.0 · Published 2 IEEE papers during undergrad. The engineering foundation is what makes me think about data problems differently.</div>
       </div>
     </div>
     <div class="certs-section">
-      <div class="certs-title">Certifications & Additional Training</div>
+      <div class="certs-title">Extra training I've done on my own time</div>
       <div class="certs-grid">
         <span class="cert-pill">NLP & LLMs Specialization</span>
         <span class="cert-pill">LLM Specialization</span>
@@ -404,25 +486,25 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
 <section id="blog">
   <div class="container">
     <p class="section-label">Writing</p>
-    <h2 class="section-title">Thoughts from the frontier</h2>
+    <h2 class="section-title">Things I've figured out that might help you</h2>
     <div class="section-line"></div>
     <div class="blog-grid">
       <div class="blog-card">
-        <div class="bc-cat">LLM Engineering</div>
-        <div class="bc-title">Why Multi-Step Prompt Engineering Is the New Software Architecture</div>
-        <div class="bc-excerpt">When your prompt is as critical as your codebase, it deserves the same rigor — version control, testing, and iteration loops.</div>
+        <div class="bc-cat">AI for Data People</div>
+        <div class="bc-title">Why your prompt is as important as your code</div>
+        <div class="bc-excerpt">Most data analysts don't treat prompts seriously. Here's why that's a mistake — and how to fix it.</div>
         <div class="bc-footer"><span>Coming soon</span><span class="bc-read">Read →</span></div>
       </div>
       <div class="blog-card">
         <div class="bc-cat">Research & NLP</div>
-        <div class="bc-title">What I Learned Building a Classifier for 500,000 Code Samples</div>
-        <div class="bc-excerpt">The dataset surprises, the fine-tuning traps, and why F1 of 0.78 on adversarial NLP is harder than it sounds.</div>
+        <div class="bc-title">What 500,000 code samples taught me about AI detection</div>
+        <div class="bc-excerpt">The surprises, the failures, and why 0.78 F1 on adversarial data is a lot harder than it sounds.</div>
         <div class="bc-footer"><span>Coming soon</span><span class="bc-read">Read →</span></div>
       </div>
       <div class="blog-card">
-        <div class="bc-cat">Agentic Systems</div>
-        <div class="bc-title">Building the Job Search Agent I Wish I Had Six Months Ago</div>
-        <div class="bc-excerpt">A behind-the-scenes look at designing an end-to-end LLM agent that actually cuts application time by 80%.</div>
+        <div class="bc-cat">Building Things</div>
+        <div class="bc-title">I automated my own job search. Here's how it works.</div>
+        <div class="bc-excerpt">Why I spent a weekend building an agent to do what was taking me 6 hours a day.</div>
         <div class="bc-footer"><span>In progress</span><span class="bc-read">Read →</span></div>
       </div>
     </div>
@@ -434,27 +516,33 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
     <div class="contact-grid">
       <div>
         <p class="section-label">Contact</p>
-        <h2 class="section-title">Let's build something worth building</h2>
+        <h2 class="section-title">Got a problem worth solving? Let's talk.</h2>
         <div class="section-line"></div>
-        <p class="contact-intro">Open to full-time roles in Data Science, ML Engineering, and AI Research. Always happy to collaborate on interesting problems. Based in Scottsdale, AZ — open to relocation.</p>
+        <p class="contact-intro">Looking for roles in Data Science or Data Analytics where I can use the full toolkit — data, AI, and engineering instinct together. Based in Scottsdale, AZ and open to relocation.</p>
         <div class="contact-links">
-          <a href="mailto:shreemithranaveen@gmail.com" class="contact-link"><div class="cl-icon">✉</div>shreemithranaveen@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#a0d3c8d2c5c5cdc9d4c8d2c1cec1d6c5c5cee0c7cdc1c9cc8ec3cfcd" class="contact-link"><div class="cl-icon">✉</div><span class="__cf_email__" data-cfemail="d8abb0aabdbdb5b1acb0aab9b6b9aebdbdb698bfb5b9b1b4f6bbb7b5">[email&#160;protected]</span></a>
           <a href="tel:5152318566" class="contact-link"><div class="cl-icon">☎</div>515-231-8566</a>
           <a href="https://linkedin.com/in/shreemithra-naveen" target="_blank" class="contact-link"><div class="cl-icon">in</div>linkedin.com/in/shreemithra-naveen</a>
         </div>
       </div>
       <div>
-        <div class="contact-form">
-          <input class="cf-input" type="text" placeholder="Your name"/>
-          <input class="cf-input" type="email" placeholder="Your email"/>
-          <textarea class="cf-input cf-textarea" placeholder="What are you working on?"></textarea>
-          <button class="cf-btn">Send Message</button>
+        <div data-fs-success style="display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:1.5rem;text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🎉</div>
+          <div style="font-weight:500;color:#fff;margin-bottom:0.25rem">Message sent!</div>
+          <div style="font-size:0.82rem;color:var(--sand-light)">I'll get back to you soon.</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Shreemithra Naveen · Data Scientist · Scottsdale, AZ · Built with intention.</footer>
-</body>
-</html>
+        <div data-fs-error style="display:none;background:rgba(220,80,60,0.15);border:1px solid rgba(220,80,60,0.3);border-radius:8px;padding:0.75rem 1rem;font-size:0.8rem;color:#ffb3a7"></div>
+        <form id="portfolio-contact" class="contact-form">
+          <input class="cf-input" type="text" name="name" placeholder="Your name" required data-fs-field/>
+          <span data-fs-error="name" style="font-size:0.75rem;color:#ffb3a7;margin-top:-0.5rem"></span>
+          <input class="cf-input" type="email" name="email" placeholder="Your email" required data-fs-field/>
+          <span data-fs-error="email" style="font-size:0.75rem;color:#ffb3a7;margin-top:-0.5rem"></span>
+          <textarea class="cf-input cf-textarea" name="message" placeholder="What are you working on?" required data-fs-field></textarea>
+          <span data-fs-error="message" style="font-size:0.75rem;color:#ffb3a7;margin-top:-0.5rem"></span>
+          <button class="cf-btn" type="submit" data-fs-submit-btn>Send Message</button>
+        </form>
+        <script>
+          window.formspree = window.formspree || function(){(formspree.q=formspree.q||[]).push(arguments)};
+          formspree('initForm',{formElement:'#portfolio-contact',formId:'xwvwwvwl'});
+        </script>
+        <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
