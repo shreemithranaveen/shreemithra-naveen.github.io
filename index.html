@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Shreemithra Naveen</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#FAF7F2;--warm-beige:#EDE8DF;--terra:#B85C38;--terra-light:#D4784F;--terra-pale:#F5EBE4;
+  --olive:#5C6B3A;--olive-light:#7A8C50;--olive-pale:#EEF0E8;
+  --brown:#3D2B1F;--brown-mid:#6B4C3B;--sand:#C9B99A;--sand-light:#DDD0BA;
+  --text:#2C1F14;--text-mid:#5C4A38;--text-soft:#8C7360;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,242,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand-light);padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--terra)}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid);transition:color 0.2s}
+.nav-links a:hover{color:var(--terra)}
+section{padding:5.5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--terra);margin-bottom:0.6rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;color:var(--brown);line-height:1.2;margin-bottom:0.9rem}
+.section-line{width:44px;height:2px;background:var(--terra);margin-bottom:2.2rem}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:7rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,var(--terra-pale) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 10% 80%,var(--olive-pale) 0%,transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{font-size:0.73rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--terra);margin-bottom:0.9rem}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:500;line-height:1.05;color:var(--brown);margin-bottom:0.9rem}
+.hero-name em{font-style:italic;color:var(--terra)}
+.hero-tagline{font-size:1rem;color:var(--text-mid);line-height:1.75;margin-bottom:1.8rem;max-width:460px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:2.2rem}
+.badge{font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px;border:1px solid}
+.badge-terra{color:var(--terra);border-color:var(--terra);background:var(--terra-pale)}
+.badge-olive{color:var(--olive);border-color:var(--olive-light);background:var(--olive-pale)}
+.badge-sand{color:var(--brown-mid);border-color:var(--sand);background:var(--warm-beige)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{padding:11px 26px;background:var(--terra);color:#fff;border:none;border-radius:4px;font-size:0.83rem;font-weight:500;letter-spacing:0.05em;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:var(--terra-light);transform:translateY(-1px)}
+.btn-outline{padding:11px 26px;background:transparent;color:var(--terra);border:1.5px solid var(--terra);border-radius:4px;font-size:0.83rem;font-weight:500;letter-spacing:0.05em;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s}
+.btn-outline:hover{background:var(--terra-pale)}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-card{background:#fff;border:1px solid var(--sand-light);border-radius:16px;padding:1.8rem;box-shadow:0 8px 40px rgba(61,43,31,0.08);max-width:300px;width:100%}
+.hc-avatar{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--terra),var(--terra-light));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:#fff;margin-bottom:0.9rem}
+.hc-name{font-weight:500;font-size:0.92rem;color:var(--brown);margin-bottom:0.15rem}
+.hc-role{font-size:0.75rem;color:var(--text-soft);margin-bottom:1.1rem}
+.hc-stat{display:flex;justify-content:space-between;font-size:0.76rem;padding:7px 0;border-bottom:1px solid var(--warm-beige);color:var(--text-mid)}
+.hc-stat:last-child{border-bottom:none}
+.hc-stat span:last-child{font-weight:500;color:var(--terra)}
+.floating-chip{position:absolute;background:#fff;border:1px solid var(--sand-light);border-radius:8px;padding:7px 13px;font-size:0.7rem;font-weight:500;color:var(--text-mid);box-shadow:0 4px 16px rgba(61,43,31,0.08)}
+.chip1{top:-18px;right:16px;color:var(--olive);border-color:var(--olive-light)}
+.chip2{bottom:8px;left:-8px}
+#about{background:var(--warm-beige)}
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start}
+.about-aside{position:sticky;top:76px}
+.about-highlight{background:#fff;border-left:3px solid var(--terra);border-radius:0 8px 8px 0;padding:1.1rem 1.4rem;margin-top:1.4rem}
+.about-highlight p{font-size:0.83rem;color:var(--text-mid);line-height:1.7;font-style:italic}
+.about-body p{font-size:0.92rem;color:var(--text-mid);line-height:1.82;margin-bottom:1.1rem}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-top:1.4rem}
+.fact-card{background:var(--cream);border:1px solid var(--sand-light);border-radius:10px;padding:0.9rem 1.1rem}
+.fact-number{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--terra)}
+.fact-label{font-size:0.72rem;color:var(--text-soft);margin-top:0.2rem}
+#skills{background:var(--cream)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.skill-group{background:#fff;border:1px solid var(--sand-light);border-radius:12px;padding:1.4rem}
+.sg-icon{font-size:1.1rem;margin-bottom:0.65rem}
+.sg-title{font-weight:500;font-size:0.88rem;color:var(--brown);margin-bottom:1rem}
+.skill-bar-item{margin-bottom:0.75rem}
+.skill-bar-label{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-mid);margin-bottom:0.3rem}
+.skill-bar-label span:last-child{color:var(--terra);font-weight:500}
+.skill-bar-track{height:4px;background:var(--warm-beige);border-radius:4px;overflow:hidden}
+.skill-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--terra),var(--terra-light))}
+#experience{background:var(--terra-pale)}
+.exp-timeline{position:relative;padding-left:2rem}
+.exp-timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1.5px;background:var(--sand)}
+.exp-item{position:relative;margin-bottom:2.4rem}
+.exp-dot{position:absolute;left:-2.35rem;top:6px;width:10px;height:10px;border-radius:50%;background:var(--terra);border:2px solid var(--cream)}
+.exp-period{font-size:0.7rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--terra);margin-bottom:0.25rem}
+.exp-role{font-weight:500;font-size:0.98rem;color:var(--brown);margin-bottom:0.12rem}
+.exp-org{font-size:0.82rem;color:var(--text-soft);margin-bottom:0.7rem}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{font-size:0.83rem;color:var(--text-mid);line-height:1.72;padding-left:1rem;position:relative;margin-bottom:0.38rem}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--terra);font-size:0.78rem}
+#projects{background:var(--cream)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
+.project-card{background:#fff;border:1px solid var(--sand-light);border-radius:14px;padding:1.8rem;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terra)}
+.project-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(61,43,31,0.1)}
+.pc-tag{font-size:0.66rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra);margin-bottom:0.65rem}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--brown);margin-bottom:0.5rem;line-height:1.3}
+.pc-problem{font-size:0.72rem;font-weight:500;color:var(--text-soft);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.05em}
+.pc-desc{font-size:0.83rem;color:var(--text-mid);line-height:1.72;margin-bottom:0.9rem}
+.pc-result{background:var(--terra-pale);border-radius:6px;padding:0.6rem 0.9rem;margin-bottom:1rem}
+.pc-result-label{font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;color:var(--terra);margin-bottom:0.15rem}
+.pc-result-text{font-size:0.8rem;color:var(--brown-mid);font-weight:500}
+.pc-chips{display:flex;flex-wrap:wrap;gap:0.35rem}
+.pc-chip{font-size:0.66rem;padding:3px 9px;background:var(--olive-pale);color:var(--olive);border-radius:20px}
+#education{background:var(--olive-pale)}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.edu-card{background:#fff;border:1px solid rgba(92,107,58,0.18);border-radius:12px;padding:1.6rem;position:relative}
+.edu-badge{position:absolute;top:1.2rem;right:1.2rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:var(--olive-pale);color:var(--olive);border:1px solid rgba(92,107,58,0.2)}
+.edu-degree{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--brown);margin-bottom:0.25rem;line-height:1.3}
+.edu-school{font-size:0.85rem;color:var(--terra);font-weight:500;margin-bottom:0.2rem}
+.edu-year{font-size:0.75rem;color:var(--text-soft);margin-bottom:0.9rem}
+.edu-detail{font-size:0.8rem;color:var(--text-mid);line-height:1.65}
+.certs-section{margin-top:2.5rem}
+.certs-title{font-weight:500;font-size:0.88rem;color:var(--brown);margin-bottom:1rem}
+.certs-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
+.cert-pill{font-size:0.72rem;padding:6px 14px;background:#fff;color:var(--text-mid);border-radius:20px;border:1px solid var(--sand-light)}
+#blog{background:var(--warm-beige)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
+.blog-card{background:#fff;border:1px solid var(--sand-light);border-radius:12px;padding:1.4rem;cursor:pointer;transition:box-shadow 0.2s}
+.blog-card:hover{box-shadow:0 8px 24px rgba(61,43,31,0.08)}
+.bc-cat{font-size:0.66rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--olive);margin-bottom:0.65rem}
+.bc-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--brown);line-height:1.4;margin-bottom:0.65rem}
+.bc-excerpt{font-size:0.8rem;color:var(--text-soft);line-height:1.6;margin-bottom:0.9rem}
+.bc-footer{display:flex;justify-content:space-between;align-items:center;font-size:0.7rem;color:var(--text-soft)}
+.bc-read{color:var(--terra);font-weight:500}
+#contact{background:var(--brown);color:#fff}
+#contact .section-label{color:var(--sand)}
+#contact .section-title{color:#fff}
+#contact .section-line{background:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-intro{font-size:0.9rem;color:var(--sand-light);line-height:1.8;margin-bottom:1.8rem}
+.contact-links{display:flex;flex-direction:column;gap:0.7rem}
+.contact-link{display:flex;align-items:center;gap:0.7rem;font-size:0.83rem;color:var(--sand-light);text-decoration:none;transition:color 0.2s}
+.contact-link:hover{color:#fff}
+.cl-icon{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:0.82rem;flex-shrink:0}
+.contact-form{display:flex;flex-direction:column;gap:0.9rem}
+.cf-input{padding:11px 15px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:0.83rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s}
+.cf-input::placeholder{color:rgba(255,255,255,0.35)}
+.cf-input:focus{border-color:var(--sand)}
+.cf-textarea{min-height:110px;resize:vertical}
+.cf-btn{padding:12px 26px;background:var(--terra);color:#fff;border:none;border-radius:6px;font-size:0.83rem;font-weight:500;cursor:pointer;transition:background 0.2s;font-family:'DM Sans',sans-serif}
+.cf-btn:hover{background:var(--terra-light)}
+footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);padding:1.4rem 2rem;text-align:center;font-size:0.73rem;color:rgba(255,255,255,0.35)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp 0.65s ease both}
+.d1{animation-delay:0.1s}.d2{animation-delay:0.22s}.d3{animation-delay:0.36s}.d4{animation-delay:0.5s}
+@media(max-width:768px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .about-aside{position:static}
+  .nav-links{gap:1rem}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">S. Naveen</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow fade-up">Data Scientist · AI Engineer · NLP Researcher</p>
+        <h1 class="hero-name fade-up d1">Shreemithra<br><em>Naveen</em></h1>
+        <p class="hero-tagline fade-up d2">I build LLM pipelines, agentic AI systems, and data workflows that actually work at scale — from research labs to enterprise clients.</p>
+        <div class="hero-badges fade-up d3">
+          <span class="badge badge-terra">M.S. Data Science · GPA 4.0</span>
+          <span class="badge badge-olive">IEEE Published</span>
+          <span class="badge badge-sand">SemEval 2026</span>
+          <span class="badge badge-terra">2.5+ Years Experience</span>
+          <span class="badge badge-olive">Open to Relocation</span>
+        </div>
+        <div class="hero-actions fade-up d4">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-outline">Let's Connect</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-chip chip1">✦ GPA 4.0 / 4.0</div>
+        <div class="hero-card">
+          <div class="hc-avatar">SN</div>
+          <p class="hc-name">Shreemithra Naveen</p>
+          <p class="hc-role">Data Scientist · Scottsdale, AZ</p>
+          <div class="hc-stat"><span>Manual Collection Eliminated</span><span>100%</span></div>
+          <div class="hc-stat"><span>Research Awards Managed</span><span>2,000+</span></div>
+          <div class="hc-stat"><span>Team Effort Reduced</span><span>60%</span></div>
+          <div class="hc-stat"><span>IEEE Papers Published</span><span>2</span></div>
+          <div class="hc-stat"><span>SemEval NLP F1 Score</span><span>0.78</span></div>
+        </div>
+        <div class="floating-chip chip2">📍 Scottsdale, AZ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-aside">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Human at the center of every model</h2>
+        <div class="section-line"></div>
+        <div class="about-highlight">
+          <p>"I don't just build models — I build systems that solve problems people actually have."</p>
+        </div>
+        <div class="about-facts">
+          <div class="fact-card"><div class="fact-number">2.5+</div><div class="fact-label">Years of measurable impact</div></div>
+          <div class="fact-card"><div class="fact-number">60%</div><div class="fact-label">Team effort cut via automation</div></div>
+          <div class="fact-card"><div class="fact-number">500K+</div><div class="fact-label">Samples in NLP classifier</div></div>
+          <div class="fact-card"><div class="fact-number">2</div><div class="fact-label">IEEE publications</div></div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>I'm a Data Scientist specializing in LLM-powered pipelines, RAG systems, and multi-step prompt engineering. My work sits at the intersection of applied AI research and real-world engineering — where the goal is always a system that works in production, not just in a notebook.</p>
+        <p>At the University of Arizona, I deployed a production LLM agent that autonomously extracted structured data from 2,000+ websites, completely eliminating manual data collection. At Futurlytic, I built enterprise-grade ETL pipelines for HSBC and Microsoft. I've competed at SemEval 2026 — one of the top global NLP competitions — and published two IEEE papers on autonomous robotics.</p>
+        <p>I currently work in financial data analytics, applying production-level precision to complex, unstructured data problems. I'm always building something on the side — right now, an agentic job search system that cuts application time by over 80%.</p>
+        <p>Based in Scottsdale, AZ and open to relocation for the right opportunity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills & Expertise</p>
+    <h2 class="section-title">The full stack of what I bring</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="sg-icon">🤖</div>
+        <div class="sg-title">LLM & AI</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Prompt Engineering (multi-step)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:96%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Agentic AI Systems</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>RAG Systems</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>OpenAI API / LLM APIs</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>NLP / CodeBERT / Fine-tuning</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>LLM-as-a-Judge</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-icon">💻</div>
+        <div class="sg-title">Programming & Data</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Python (Pandas, NumPy, Sklearn)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:97%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>SQL (Advanced)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:94%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>ETL Pipelines</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Azure</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>R · SAS</span><span>Proficient</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Docker · Git</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-icon">📊</div>
+        <div class="sg-title">Analytics</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>A/B Testing & Experiment Design</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Statistical Modeling</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Feature Engineering</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Anomaly Detection</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:84%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-icon">📈</div>
+        <div class="sg-title">Visualization</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Tableau</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Power BI</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Plotly · Looker Studio</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Excel (Power Query, Pivot)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where I've built things that matter</h2>
+    <div class="section-line"></div>
+    <div class="exp-timeline">
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Feb 2026 – Present</div>
+        <div class="exp-role">Financial Reporting Associate</div>
+        <div class="exp-org">Equity Methods · Scottsdale, AZ</div>
+        <ul class="exp-bullets">
+          <li>Transforming highly unstructured Excel data into clean, structured financial deliverables for clients — demonstrating production-level data accuracy from day one.</li>
+          <li>Applying rigorous data engineering practices to complex financial reporting workflows in a fast-paced analytical environment.</li>
+        </ul>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">May 2024 – Dec 2025</div>
+        <div class="exp-role">Graduate Research Fellow – Research Analytics</div>
+        <div class="exp-org">University of Arizona · Tucson, AZ</div>
+        <ul class="exp-bullets">
+          <li>Deployed a production LLM agent (ChatGPT API + BeautifulSoup) autonomously extracting structured data from 2,000+ websites — eliminating 100% of manual data collection.</li>
+          <li>Engineered multi-step prompts and built cross-platform ETL pipelines across 3 systems (Pivot-RP, InfoReady, Smartsheet), cutting team effort by 60% across 2,000+ active research awards.</li>
+          <li>Designed A/B tests and hypothesis-driven experiments; delivered analytical presentations to leadership that directly shaped grant strategy decisions.</li>
+        </ul>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">Jan 2025 – May 2025</div>
+        <div class="exp-role">Data Analyst Intern</div>
+        <div class="exp-org">Sky Village Financial</div>
+        <ul class="exp-bullets">
+          <li>Identified variance drivers across key business metrics — built Tableau and Power BI dashboards adopted org-wide for self-serve KPI monitoring.</li>
+          <li>Reduced manual reporting overhead for cross-functional finance teams through scalable dashboard design.</li>
+        </ul>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-period">May 2023 – Dec 2023</div>
+        <div class="exp-role">Data Specialist (Intern → Full-time)</div>
+        <div class="exp-org">Futurlytic Private Limited · Bangalore, India</div>
+        <ul class="exp-bullets">
+          <li>Built automated ETL and analytics pipelines for HSBC and Microsoft using SQL, Python, and Tableau — replacing manual processes entirely for 2 enterprise clients.</li>
+          <li>Designed Azure-based data integration workflows with full ETL QA, ensuring data integrity across business-critical reporting systems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">Problems I've picked fights with</h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="pc-tag">NLP Research · SemEval 2026 · University of Arizona</div>
+        <div class="pc-title">AI vs. Human Code Detection</div>
+        <div class="pc-problem">The Problem</div>
+        <p class="pc-desc">Banks, universities, and software firms cannot reliably distinguish AI-generated code from human-written code — creating critical gaps in plagiarism detection, compliance, and code validation.</p>
+        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
+        <p class="pc-desc">Built a CodeBERT classifier trained on 500,000+ samples with iterative multi-step LLM prompt engineering. Submitted to SemEval 2026, one of the top global NLP competitions.</p>
+        <div class="pc-result"><div class="pc-result-label">Key Result</div><div class="pc-result-text">F1 Score of 0.78 on adversarial NLP classification</div></div>
+        <div class="pc-chips"><span class="pc-chip">CodeBERT</span><span class="pc-chip">NLP</span><span class="pc-chip">Prompt Engineering</span><span class="pc-chip">SemEval 2026</span><span class="pc-chip">Python</span></div>
+      </div>
+      <div class="project-card">
+        <div class="pc-tag">Agentic AI · 2026 · In Development</div>
+        <div class="pc-title">Agentic Job Search & Outreach Automation</div>
+        <div class="pc-problem">The Problem</div>
+        <p class="pc-desc">Applying to 5 companies takes 5–6 hours of manual effort — tailoring resumes, writing cover letters, researching contacts. The process is broken and doesn't scale.</p>
+        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
+        <p class="pc-desc">Building an end-to-end agentic LLM system that reads job descriptions, matches skills, auto-generates tailored resumes and cover letters, identifies hiring managers, and delivers a daily digest with one-click apply links.</p>
+        <div class="pc-result"><div class="pc-result-label">Target Outcome</div><div class="pc-result-text">Under 120 min per 10 applications (vs. 5–6 hrs today)</div></div>
+        <div class="pc-chips"><span class="pc-chip">Agentic AI</span><span class="pc-chip">LLM</span><span class="pc-chip">RAG</span><span class="pc-chip">Automation</span><span class="pc-chip">OpenAI API</span></div>
+      </div>
+      <div class="project-card">
+        <div class="pc-tag">IEEE Published · 2021–2023 · BMS Institute of Technology</div>
+        <div class="pc-title">Autonomous Floor Cleaning Robot</div>
+        <div class="pc-problem">The Problem</div>
+        <p class="pc-desc">Traditional vacuum robots deviate around obstacles — bottles, erasers, small objects — leaving areas uncleaned. A fundamental design limitation no existing product had solved.</p>
+        <div class="pc-problem" style="margin-top:0.6rem">The Solution</div>
+        <p class="pc-desc">Proposed autonomous robotic systems using computer vision for real-time object detection, weight estimation, and robotic arm manipulation — enabling the robot to lift obstacles, clean underneath, and replace them.</p>
+        <div class="pc-result"><div class="pc-result-label">Key Result</div><div class="pc-result-text">2 IEEE papers published on autonomous AI systems</div></div>
+        <div class="pc-chips"><span class="pc-chip">Computer Vision</span><span class="pc-chip">Robotics</span><span class="pc-chip">Object Detection</span><span class="pc-chip">IEEE</span><span class="pc-chip">Autonomous AI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <p class="section-label">Education & Certifications</p>
+    <h2 class="section-title">The foundation under the work</h2>
+    <div class="section-line"></div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-badge">STEM-designated</div>
+        <div class="edu-degree">M.S. Data Science</div>
+        <div class="edu-school">University of Arizona</div>
+        <div class="edu-year">Graduated December 2025</div>
+        <div class="edu-detail">GPA: 4.0 / 4.0 · Focus: NLP, LLMs, Machine Learning, Statistical Modeling, Big Data Engineering</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-badge">Engineering</div>
+        <div class="edu-degree">B.E. Engineering</div>
+        <div class="edu-school">BMS Institute of Technology · Bangalore, India</div>
+        <div class="edu-year">Graduated May 2023</div>
+        <div class="edu-detail">GPA: 3.75 / 4.0 · Published 2 IEEE papers on autonomous robotic systems during undergraduate research.</div>
+      </div>
+    </div>
+    <div class="certs-section">
+      <div class="certs-title">Certifications & Additional Training</div>
+      <div class="certs-grid">
+        <span class="cert-pill">NLP & LLMs Specialization</span>
+        <span class="cert-pill">LLM Specialization</span>
+        <span class="cert-pill">IBM Intro to AI & Watson</span>
+        <span class="cert-pill">Python & Data Structures – U of Michigan</span>
+        <span class="cert-pill">Big Data & Hadoop</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <p class="section-label">Writing</p>
+    <h2 class="section-title">Thoughts from the frontier</h2>
+    <div class="section-line"></div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="bc-cat">LLM Engineering</div>
+        <div class="bc-title">Why Multi-Step Prompt Engineering Is the New Software Architecture</div>
+        <div class="bc-excerpt">When your prompt is as critical as your codebase, it deserves the same rigor — version control, testing, and iteration loops.</div>
+        <div class="bc-footer"><span>Coming soon</span><span class="bc-read">Read →</span></div>
+      </div>
+      <div class="blog-card">
+        <div class="bc-cat">Research & NLP</div>
+        <div class="bc-title">What I Learned Building a Classifier for 500,000 Code Samples</div>
+        <div class="bc-excerpt">The dataset surprises, the fine-tuning traps, and why F1 of 0.78 on adversarial NLP is harder than it sounds.</div>
+        <div class="bc-footer"><span>Coming soon</span><span class="bc-read">Read →</span></div>
+      </div>
+      <div class="blog-card">
+        <div class="bc-cat">Agentic Systems</div>
+        <div class="bc-title">Building the Job Search Agent I Wish I Had Six Months Ago</div>
+        <div class="bc-excerpt">A behind-the-scenes look at designing an end-to-end LLM agent that actually cuts application time by 80%.</div>
+        <div class="bc-footer"><span>In progress</span><span class="bc-read">Read →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's build something worth building</h2>
+        <div class="section-line"></div>
+        <p class="contact-intro">Open to full-time roles in Data Science, ML Engineering, and AI Research. Always happy to collaborate on interesting problems. Based in Scottsdale, AZ — open to relocation.</p>
+        <div class="contact-links">
+          <a href="mailto:shreemithranaveen@gmail.com" class="contact-link"><div class="cl-icon">✉</div>shreemithranaveen@gmail.com</a>
+          <a href="tel:5152318566" class="contact-link"><div class="cl-icon">☎</div>515-231-8566</a>
+          <a href="https://linkedin.com/in/shreemithra-naveen" target="_blank" class="contact-link"><div class="cl-icon">in</div>linkedin.com/in/shreemithra-naveen</a>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <input class="cf-input" type="text" placeholder="Your name"/>
+          <input class="cf-input" type="email" placeholder="Your email"/>
+          <textarea class="cf-input cf-textarea" placeholder="What are you working on?"></textarea>
+          <button class="cf-btn">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Shreemithra Naveen · Data Scientist · Scottsdale, AZ · Built with intention.</footer>
+</body>
+</html>
