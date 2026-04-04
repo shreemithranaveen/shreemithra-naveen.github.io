@@ -70,15 +70,26 @@ section{padding:5.5rem 2rem}
 .fact-number{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--terra)}
 .fact-label{font-size:0.72rem;color:var(--text-soft);margin-top:0.2rem}
 #skills{background:var(--cream)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
-.skill-group{background:#fff;border:1px solid var(--sand-light);border-radius:12px;padding:1.4rem}
-.sg-icon{font-size:1.1rem;margin-bottom:0.65rem}
-.sg-title{font-weight:500;font-size:0.88rem;color:var(--brown);margin-bottom:1rem}
-.skill-bar-item{margin-bottom:0.75rem}
-.skill-bar-label{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-mid);margin-bottom:0.3rem}
-.skill-bar-label span:last-child{color:var(--terra);font-weight:500}
-.skill-bar-track{height:4px;background:var(--warm-beige);border-radius:4px;overflow:hidden}
-.skill-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--terra),var(--terra-light))}
+.skills-categories{display:flex;flex-direction:column;gap:2rem}
+.skill-category{}
+.skill-cat-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem}
+.skill-cat-icon{width:32px;height:32px;border-radius:8px;background:var(--terra-pale);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
+.skill-cat-title{font-weight:500;font-size:0.9rem;color:var(--brown)}
+.skill-tags-wrap{display:flex;flex-wrap:wrap;gap:0.5rem}
+.skill-pill{font-size:0.75rem;padding:6px 14px;border-radius:20px;border:1.5px solid;font-weight:500;transition:transform 0.15s}
+.skill-pill:hover{transform:translateY(-2px)}
+.pill-expert{background:var(--terra-pale);color:var(--terra);border-color:var(--terra)}
+.pill-advanced{background:var(--olive-pale);color:var(--olive);border-color:var(--olive-light)}
+.pill-proficient{background:var(--warm-beige);color:var(--brown-mid);border-color:var(--sand)}
+.skill-legend{display:flex;gap:1.2rem;margin-bottom:1.8rem;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:var(--text-soft)}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+.fun-facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.1rem}
+.fun-card{background:#fff;border:1px solid var(--sand-light);border-radius:14px;padding:1.4rem;transition:transform 0.2s}
+.fun-card:hover{transform:translateY(-3px)}
+.fun-icon{font-size:1.8rem;margin-bottom:0.75rem}
+.fun-title{font-weight:500;font-size:0.88rem;color:var(--brown);margin-bottom:0.4rem}
+.fun-desc{font-size:0.8rem;color:var(--text-soft);line-height:1.65}
 #experience{background:var(--terra-pale)}
 .exp-timeline{position:relative;padding-left:2rem}
 .exp-timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1.5px;background:var(--sand)}
@@ -169,6 +180,7 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#funfacts">Beyond Work</a></li>
       <li><a href="#blog">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -246,40 +258,62 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
     <p class="section-label">Skills & Tools</p>
     <h2 class="section-title">What I actually use to get things done</h2>
     <div class="section-line"></div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="sg-icon">📊</div>
-        <div class="sg-title">Data Science & Analysis</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Python (Pandas, NumPy, Sklearn)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:97%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>SQL (Advanced)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:94%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Statistical Modeling & A/B Testing</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Feature Engineering</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>R · SAS</span><span>Proficient</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%"></div></div></div>
+    <div class="skill-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--terra)"></div>Expert</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--olive)"></div>Advanced</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--sand)"></div>Proficient</div>
+    </div>
+    <div class="skills-categories">
+      <div class="skill-category">
+        <div class="skill-cat-header"><div class="skill-cat-icon">📊</div><div class="skill-cat-title">Data Science & Analysis</div></div>
+        <div class="skill-tags-wrap">
+          <span class="skill-pill pill-expert">Python</span>
+          <span class="skill-pill pill-expert">Pandas · NumPy</span>
+          <span class="skill-pill pill-expert">Scikit-learn</span>
+          <span class="skill-pill pill-expert">SQL (Advanced)</span>
+          <span class="skill-pill pill-expert">A/B Testing</span>
+          <span class="skill-pill pill-expert">Statistical Modeling</span>
+          <span class="skill-pill pill-expert">Feature Engineering</span>
+          <span class="skill-pill pill-proficient">R</span>
+          <span class="skill-pill pill-proficient">SAS</span>
+        </div>
       </div>
-      <div class="skill-group">
-        <div class="sg-icon">🤖</div>
-        <div class="sg-title">AI Tools I Actually Use</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>LLM APIs (OpenAI, Groq, etc.)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Prompt Engineering (multi-step)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:96%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>RAG Systems</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Agentic Pipelines</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:87%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>NLP / CodeBERT / Fine-tuning</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><div class="skill-cat-icon">🤖</div><div class="skill-cat-title">AI Tools I Actually Use</div></div>
+        <div class="skill-tags-wrap">
+          <span class="skill-pill pill-expert">Prompt Engineering</span>
+          <span class="skill-pill pill-expert">LLM APIs (OpenAI, Groq)</span>
+          <span class="skill-pill pill-expert">Agentic Pipelines</span>
+          <span class="skill-pill pill-advanced">RAG Systems</span>
+          <span class="skill-pill pill-advanced">LangChain</span>
+          <span class="skill-pill pill-advanced">NLP</span>
+          <span class="skill-pill pill-advanced">CodeBERT</span>
+          <span class="skill-pill pill-advanced">Fine-tuning</span>
+          <span class="skill-pill pill-advanced">LLM-as-a-Judge</span>
+        </div>
       </div>
-      <div class="skill-group">
-        <div class="sg-icon">🔧</div>
-        <div class="sg-title">Engineering & Pipelines</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>ETL Pipelines</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Azure</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Docker · Git</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Web Scraping (BeautifulSoup)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div></div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><div class="skill-cat-icon">🔧</div><div class="skill-cat-title">Engineering & Pipelines</div></div>
+        <div class="skill-tags-wrap">
+          <span class="skill-pill pill-expert">ETL Pipelines</span>
+          <span class="skill-pill pill-expert">Web Scraping</span>
+          <span class="skill-pill pill-advanced">Azure</span>
+          <span class="skill-pill pill-advanced">Docker</span>
+          <span class="skill-pill pill-advanced">Git</span>
+          <span class="skill-pill pill-advanced">BeautifulSoup</span>
+          <span class="skill-pill pill-advanced">Apache Spark</span>
+          <span class="skill-pill pill-advanced">Hadoop</span>
+        </div>
       </div>
-      <div class="skill-group">
-        <div class="sg-icon">📈</div>
-        <div class="sg-title">Visualization & Reporting</div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Tableau</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:93%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Power BI</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:91%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Plotly · Looker Studio</span><span>Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-        <div class="skill-bar-item"><div class="skill-bar-label"><span>Excel (Power Query, Pivot)</span><span>Expert</span></div><div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      <div class="skill-category">
+        <div class="skill-cat-header"><div class="skill-cat-icon">📈</div><div class="skill-cat-title">Visualization & Reporting</div></div>
+        <div class="skill-tags-wrap">
+          <span class="skill-pill pill-expert">Tableau</span>
+          <span class="skill-pill pill-expert">Power BI</span>
+          <span class="skill-pill pill-expert">Excel (Power Query · Pivot)</span>
+          <span class="skill-pill pill-advanced">Plotly</span>
+          <span class="skill-pill pill-advanced">Looker Studio</span>
+        </div>
       </div>
     </div>
   </div>
@@ -483,6 +517,36 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
   </div>
 </section>
 
+<section id="funfacts" style="background:var(--terra-pale)">
+  <div class="container">
+    <p class="section-label">Beyond the Work</p>
+    <h2 class="section-title">A few things that make me, me</h2>
+    <div class="section-line"></div>
+    <div class="fun-facts-grid">
+      <div class="fun-card">
+        <div class="fun-icon">🎓</div>
+        <div class="fun-title">Student Ambassador</div>
+        <div class="fun-desc">Served as Student Ambassador at BMSIT&M — built relationships, ran training sessions, and somehow managed to juggle project management, technical support, and public speaking all at once.</div>
+      </div>
+      <div class="fun-card">
+        <div class="fun-icon">🍳</div>
+        <div class="fun-title">Sustainable home cook</div>
+        <div class="fun-desc">I cook sustainable food with zero compromise on taste. Music on, ingredients out, zero stress — the kitchen is honestly my favorite place to reset.</div>
+      </div>
+      <div class="fun-card">
+        <div class="fun-icon">☕</div>
+        <div class="fun-title">Coffee first, always</div>
+        <div class="fun-desc">Every single day starts with a coffee shot. Non-negotiable. The data doesn't lie and neither does my morning routine.</div>
+      </div>
+      <div class="fun-card">
+        <div class="fun-icon">🧘</div>
+        <div class="fun-title">Yoga & mandala art</div>
+        <div class="fun-desc">When I feel worried or overwhelmed, I don't doom-scroll — I roll out the yoga mat or pick up a pen and draw mandalas. It works every time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="blog">
   <div class="container">
     <p class="section-label">Writing</p>
@@ -520,7 +584,7 @@ footer{background:var(--brown);border-top:1px solid rgba(255,255,255,0.08);paddi
         <div class="section-line"></div>
         <p class="contact-intro">Looking for roles in Data Science or Data Analytics where I can use the full toolkit — data, AI, and engineering instinct together. Based in Scottsdale, AZ and open to relocation.</p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#a0d3c8d2c5c5cdc9d4c8d2c1cec1d6c5c5cee0c7cdc1c9cc8ec3cfcd" class="contact-link"><div class="cl-icon">✉</div><span class="__cf_email__" data-cfemail="d8abb0aabdbdb5b1acb0aab9b6b9aebdbdb698bfb5b9b1b4f6bbb7b5">[email&#160;protected]</span></a>
+          <a href="mailto:shreemithranaveen@gmail.com" class="contact-link"><div class="cl-icon">✉</div>shreemithranaveen@gmail.com</a>
           <a href="tel:5152318566" class="contact-link"><div class="cl-icon">☎</div>515-231-8566</a>
           <a href="https://linkedin.com/in/shreemithra-naveen" target="_blank" class="contact-link"><div class="cl-icon">in</div>linkedin.com/in/shreemithra-naveen</a>
         </div>
